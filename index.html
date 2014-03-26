@@ -1,0 +1,81 @@
+---
+layout: bootcamp
+root: .
+venue: Mozilla Toronto
+address: 366 Adelaide Street West, Suite 500, Toronto, Ontario
+country: Canada
+humandate: April 28-30, 2014
+humantime: 9:00 am - 4:30 pm
+startdate: 2014-04-28
+enddate: 2014-04-30
+latlng: 43.64711,-79.39423
+registration: open
+instructor: ["Greg Wilson", "Warren Code"]
+contact: gvwilson@software-carpentry.org
+eventbrite: 9481333925
+---
+{% if page.eventbrite %}
+<iframe src="http://www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt" frameborder="0" width="100%" scrolling="auto"></iframe>
+{% endif %}
+
+<h2>General Information</h2>
+
+<p>
+  <a href="http://software-carpentry.org">Software Carpentry</a>'s mission
+  is to help scientists and engineers become more productive
+  by teaching them basic lab skills for computing
+  like program design, version control, data management, and task automation.
+  This three-day workshop will introduce participants to
+  educational psychology, instructional design, and modern teaching practices,
+  and show them how to apply all three to be more effective educators.
+</p>
+
+{% if page.instructor %}
+<p>
+  <strong>Instructors:</strong>
+  {{page.instructor | join: ', ' %}}
+</p>
+{% endif %}
+
+<p>
+  <strong>Who:</strong>
+  This workshop is aimed at anyone who is interested in teaching Software Carpentry
+  (or teaching programming to adults in general).
+</p>
+
+{% if page.latlng %}
+<p>
+  <strong>Where:</strong>
+  {{ page.address }}.
+  Get directions with
+  <a href="http://www.openstreetmap.org/?mlat={{ page.latlng | replace:',','&mlon=' }}&zoom=16">OpenStreetMap</a>
+  or
+  <a href="http://maps.google.com/maps?q={{ page.latlng }}">Google Maps</a>.
+</p>
+{% endif %}
+
+<p>
+  <strong>Requirements:</strong>
+  Please get a copy of <em><a href="http://www.amazon.com/How-Learning-Works-Research-Based-Principles/dp/0470484101/">How Learning Works</a></em> and read it <em>before</em> coming to the workshop.
+</p>
+
+<p>
+  <strong>Contact</strong>:
+  Please mail
+  {% if page.contact %}
+    <a href='mailto:{{page.contact}}'>{{page.contact}}</a>
+  {% else %}
+    <a href='mailto:{{site.contact}}'>{{site.contact}}</a>
+  {% endif %}
+  for more information.
+</p>
+
+<hr/>
+
+<h2>Schedule (Under Development)</h2>
+
+<table class="table table-striped">
+  <tr> <td>Monday</td>    <td>09:00</td>  <td>TBA</td> </tr>
+  <tr> <td>Tuesday</td>   <td>09:00</td>  <td>TBA</td> </tr>
+  <tr> <td>Wednesday</td> <td>09:00</td>  <td>TBA</td> </tr>
+</table>
